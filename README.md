@@ -15,6 +15,6 @@
 # Model Traning
 - I have used  [VGG Image Annotator](https://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html) to annotate comic pages and stored them in a json format.
 - From annotations and comic pages masks are created around faces of characters, I also cropped and saved faces for classifier traning.
-- For segmentation model, U-Net with pretrained VGG16 layers as Encoder were used, it was giving validation accuracy around `98%` but Iou was around `0.15`.
+- For segmentation model, [U-Net](https://en.wikipedia.org/wiki/U-Net#:~:text=The%20U%2DNet%20architecture%20stems,the%20resolution%20of%20the%20output.) with pretrained VGG16 layers as Encoder were used, it was giving validation accuracy around `98%` but Iou(Intersection over Union) was around `0.15`.
 - Data augmentation was applied for images and masks to reduce overfitting.
 - For classification pretrained VGG16 was used, it is giving `100%` accuracy within `10` epochs even with augmented faces data.
