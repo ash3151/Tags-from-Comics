@@ -32,6 +32,10 @@
 - Hosting this app on cloud will reduce the time to generate output.
 
 # Installation
-
+- Clone this repository `https://github.com/ash3151/Tags-from-Comics.git` in your pc.
+- Create a `uploads` directory in `static`.
+- Download the models of marvel from [here](https://drive.google.com/drive/folders/1ycGmBNtfjvd5rdiB9JHC0FGJajonA51M?usp=sharing) and save them in `/models/marvel/`
+- Open terminal in this directory and run `pip install -r requirements.txt`
+- Run `python app.py`
 
 
