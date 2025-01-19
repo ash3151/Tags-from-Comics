@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Comic Tags</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Using AI to get tags for your comic</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="comic_name">Comic Name:</label>
+            <input type="text" id="comic_name" name="comic_name" required>
+            <br>
+            <label for="file">Upload Comic Pages:</label>
+            <input type="file" id="file" name="file" accept="image/*" multiple required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if comic_name %}
+            <h2>Results for {{ comic_name }}</h2>
+            {% for result in results %}
+                <div class="result">
+                    <h3>Page {{ loop.index }}</h3>
+                    <img src="{{ url_for('static', filename=result['image_path'].replace('static/', '')) }}" alt="Comic Page" width="512">
+                    <h4>Detected Characters:</h4>
+                    <ul>
+                        {% for name in result['character_names'] %}
+                            <li>{{ name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>

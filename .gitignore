@@ -1,0 +1,4 @@
+\venv
+\Marvel_images
+/models/marvel/classify.h5
+/models/marvel/segment.h5
