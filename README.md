@@ -18,3 +18,20 @@
 - For segmentation model, [U-Net](https://en.wikipedia.org/wiki/U-Net#:~:text=The%20U%2DNet%20architecture%20stems,the%20resolution%20of%20the%20output.) with pretrained VGG16 layers as Encoder were used, it was giving validation accuracy around `98%` but Iou(Intersection over Union) was around `0.15`.
 - Data augmentation was applied for images and masks to reduce overfitting.
 - For classification pretrained VGG16 was used, it is giving `100%` accuracy within `10` epochs even with augmented faces data.
+
+# Technologies used
+- Tensorflow - Traning, creating, save/load models
+- Albumentations - Augmenting images and masks
+- OpenCV - Extracting masked regions in images
+- Matplotlib - To show accuracy,loss plots, display images
+- Numpy, Pandas - Data processing
+- Flask - Frontend
+
+# Improvements
+- Iou of Segmentation model can be improved using more image data, so it can predict better masks.
+- Hosting this app on cloud will reduce the time to generate output.
+
+# Installation
+
+
+
